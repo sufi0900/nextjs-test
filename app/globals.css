@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light Theme Styles */
+
+.light-theme {
+  background-color: red;
+  color: #000000;
+}
+
+/* Dark Theme Styles */
+.dark-theme {
+  background-color: #0a08089f;
+  color: #ffffff;
+}
+/* Light Theme Styles for home2 */
+.light-theme-home2 {
+  background-color: #e0e0e0; /* Set the desired light theme background color */
+  color: #000000;
+}
+
+/* Dark Theme Styles for home2 */
+.dark-theme-home2 {
+  background-color: #333333; /* Set the desired dark theme background color */
+  color: #ffffff;
+}
