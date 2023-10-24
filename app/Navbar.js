@@ -21,6 +21,7 @@ import AddReactionIcon from "@mui/icons-material/AddReaction";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 // import { ThemeProvider } from "next-themes";
 // import "./body.css";
+import MyDark from "./components/ThemeButton";
 import {
   List,
   ListItemButton,
@@ -28,11 +29,11 @@ import {
   ListItemText,
   Menu,
 } from "@mui/material";
-import DarkModeCustom from "./DarkModeCustom";
+// import DarkModeCustom from "./DarkModeCustom";
 import { DarkMode, Home } from "@mui/icons-material";
 import Slide from "@mui/material/Slide"; // Import the Slide component from Material-UI
 import useScrollTrigger from "@mui/material/useScrollTrigger"; // Import the useScrollTrigger hook
-import DarkModeToggle from "./DarkModeToggle";
+// import DarkModeToggle from "./DarkModeToggle";
 import CssBaseline from "@mui/material/CssBaseline";
 
 function HideOnScroll(props) {
@@ -291,10 +292,10 @@ function ResponsiveAppBar(props) {
 
                       <Tab
                         value="four"
-                        label={<DarkModeToggle />}
+                        label={<MyDark />}
                         className="Tab6 animate__animated animate__zoomIn"
                       >
-                        <DarkModeToggle />
+                        <MyDark />
                       </Tab>
                     </Tabs>
                   </>

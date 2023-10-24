@@ -10,6 +10,7 @@ import MouseOutlinedIcon from "@mui/icons-material/MouseOutlined";
 import SteamHomePage from "./SteamHomePage";
 import SvgHomePage from "./SvgHomePage";
 import ComponentA from "./about/aboutcode";
+import { useTheme } from "next-themes";
 
 import ComponentS from "./skills/skillcode";
 import ComponentB from "./Homepageblogs/page";
@@ -36,9 +37,14 @@ const Home = () => {
   const handleClick = () => {
     setShowComponent(!showComponent);
   };
+  const { resolvedTheme } = useTheme();
 
   return (
-    <>
+    <div
+      className={`body ${
+        resolvedTheme === "dark" ? "dark-theme-body" : "light-theme-body"
+      }`}
+    >
       <Grid
         container
         padding={2}
@@ -58,7 +64,11 @@ const Home = () => {
           container
           className="flex"
         >
-          <div className="">
+          <div
+            className={`Home ${
+              resolvedTheme === "dark" ? "dark-theme-Home" : "light-theme-Home"
+            }`}
+          >
             <div className="_CSS" id="ContainerHome">
               <div className="Home_Circle ">
                 <Image
@@ -396,7 +406,7 @@ const Home = () => {
           <ComponentC />
         </>
       )}
-    </>
+    </div>
   );
 };
 

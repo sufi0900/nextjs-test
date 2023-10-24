@@ -43,7 +43,15 @@ body.dark-mode footer {
 /* body.dark-mode {
   background: var(--background-dark);
 } */
-body.dark-mode .itemabout,
+
+.light-theme-Home {
+  background: #0e2a47;
+  border-radius: 16px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
 body.dark-mode .itemcontact,
 body.dark-mode .contactform_container,
 body.dark-mode .new_footer_area {
