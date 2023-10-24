@@ -2,7 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Light Theme Styles */
+:root {
+  /* Your default theme */
+  --background: white;
+  --foreground: black;
+}
+
+[data-theme="dark"] {
+  --background: black;
+  --foreground: white;
+}
 
 /* Light Theme Styles for home2 */
 .light-theme-home2 {

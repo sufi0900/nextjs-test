@@ -1,10 +1,10 @@
-import Navbar from "./components/Navbar";
 import MyNav from "./Navbar";
 import { Providers } from "./components/Providers";
 import "./globals.css";
 import theme from "./theme";
 import "./aos.css";
 import "./font.css";
+import "./body.css";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 

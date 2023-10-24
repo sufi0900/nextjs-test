@@ -4,10 +4,8 @@ import { useTheme } from "next-themes";
 import { useEffect } from "react";
 import Brightness3Icon from "@mui/icons-material/Brightness3"; // Moon icon
 import WbSunnyIcon from "@mui/icons-material/WbSunny"; // Sunlight icon
-import dynamic from "next/dynamic";
-import Switch from "react-switch"; // Import the react-switch component
 
-const DynamicSwitch = dynamic(() => import("react-switch"), { ssr: false });
+import Switch from "react-switch"; // Import the react-switch component
 
 const DarkModeToggle = () => {
   const { setTheme, resolvedTheme } = useTheme();
