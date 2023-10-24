@@ -1,0 +1,74 @@
+body.dark-mode .About3 p,
+body.dark-mode .footerpara p,
+body.dark-mode .About3 ul li,
+body.dark-mode .About3 ul li a,
+body.dark-mode .ListItemTextSkill,
+body.dark-mode .ListItemText,
+body.dark-mode .projectcardtitle,
+body.dark-mode .ProjectTopTextDiv,
+body.dark-mode .listitemtextadmin,
+body.dark-mode .custom-input-color input,
+body.dark-mode .custom-quill-content .ql-editor,
+body.dark-mode .custom-input-color,
+body.dark-mode .progress-label-color,
+body.dark-mode .blogcardh1,
+body.dark-mode .custom-input-color p {
+  color: black;
+}
+
+body.dark-mode .themecard:hover {
+  color: blue;
+}
+body.dark-mode .drawerBackground .MuiDrawer-paper {
+  background-color: #0e2a47;
+  border: 1px solid rgba(255, 255, 255, 0.807);
+  border-radius: 16px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(194, 232, 249, 0.484) 0px 2px 16px 0px;
+}
+body.dark-mode .Home,
+body.dark-mode .item,
+body.dark-mode .itemcontact {
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+body.dark-mode .QuillDescription p {
+  color: black;
+}
+
+body.dark-mode footer {
+  color: black;
+}
+/* body.dark-mode {
+  background: var(--background-dark);
+} */
+body.dark-mode .itemabout,
+body.dark-mode .itemcontact,
+body.dark-mode .contactform_container,
+body.dark-mode .new_footer_area {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+body.dark-mode .ProjectCard,
+body.dark-mode .ProjectTopTextDiv {
+  background: linear-gradient(
+    90deg,
+    rgba(78, 78, 246, 0.647) 0%,
+    rgba(247, 90, 216, 0.696) 100%
+  );
+
+  box-shadow: 0px 2px 4px 0px rgba(14, 30, 37, 0.12),
+    0px 2px 16px 0px rgba(14, 30, 37, 0.32);
+  border: 1px solid rgba(254, 56, 214, 0.833);
+}
+body.dark-mode {
+  background: linear-gradient(
+    90deg,
+    rgba(78, 78, 246, 0.647) 0%,
+    rgba(247, 90, 216, 0.696) 100%
+  );
+}
