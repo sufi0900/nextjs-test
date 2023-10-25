@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { client } from "@/app/lib/sanity";
 import BlogCard from "./BlogCard";
@@ -6,14 +5,12 @@ import Grid from "@mui/material/Grid";
 import Head from "next/head";
 import Script from "next/script";
 import { NextSeo } from "next-seo";
-import { useTheme } from "next-themes";
 async function getData() {
   const query = `*[_type == "post"]`;
   const data = await client.fetch(query);
   return data;
 }
 export default async function AllBlogs() {
-  const { resolvedTheme } = useTheme();
   function sufianmustafawebdeveloperblogs() {
     return {
       __html: `  {
@@ -37,12 +34,7 @@ export default async function AllBlogs() {
   }
   const data = await getData();
   return (
-    <div
-      style={{ minHeight: "100vh" }}
-      className={`body  ${
-        resolvedTheme === "dark" ? "dark-theme-body" : "light-theme-body"
-      }`}
-    >
+    <div style={{ minHeight: "100vh" }}>
       <Head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

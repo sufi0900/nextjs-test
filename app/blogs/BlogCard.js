@@ -4,8 +4,7 @@ import CardHeader from "@mui/material/CardHeader";
 import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
 import { red } from "@mui/material/colors";
-import { urlFor } from "@/app/lib/sanityImageUrl";
-
+import { useTheme } from "next-themes";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 
 // import { motion } from "framer-motion";
@@ -14,7 +13,7 @@ import Divider from "@mui/material/Divider";
 import Grid from "@mui/material/Grid";
 import Link from "next/link";
 import { Card } from "@mui/material";
-import { useTheme } from "next-themes";
+
 export default function RecipeReviewCard({ postimg, title, slug }) {
   const { resolvedTheme } = useTheme();
   return (
@@ -35,7 +34,7 @@ export default function RecipeReviewCard({ postimg, title, slug }) {
         }}
       >
         <Card
-          className={`BlogCard ProjectCard item ${
+          className={` BlogCard ProjectCard item ${
             resolvedTheme === "dark" ? "dark-theme-item" : "light-theme-item"
           }`}
         >
@@ -64,12 +63,19 @@ export default function RecipeReviewCard({ postimg, title, slug }) {
             }
           />
           {/* <p> {date}</p> */}
-          <div className="CardHeading">
+
+          <div
+            className={` CardHeading  ${
+              resolvedTheme === "dark"
+                ? "dark-theme-textcolor"
+                : "light-theme-textcolor"
+            }`}
+          >
             {" "}
             <h1 style={{ left: "0%", fontSize: "22px" }}> {title} </h1>
           </div>
 
-          <img
+          {/* <img
             src={urlFor(postimg).url()}
             alt="blogImg"
             style={{
@@ -77,14 +83,14 @@ export default function RecipeReviewCard({ postimg, title, slug }) {
               width: "97%",
               borderRadius: "20px",
             }}
-          />
+          /> */}
 
           <Link
             href={`/blogs/${slug.current}`}
             className="themecard custom-input-color"
           >
             <p
-              className={`themecard About3 ${
+              className={` themecard  ${
                 resolvedTheme === "dark"
                   ? "dark-theme-textcolor"
                   : "light-theme-textcolor"
