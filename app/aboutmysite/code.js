@@ -13,16 +13,16 @@ import Images from "./Images";
 import "animate.css/animate.min.css";
 import Divider from "@mui/material/Divider";
 import { Helmet } from "react-helmet";
-
+import { useTheme } from "next-themes";
 const MyPortfolio = () => {
-  const Item = styled(Paper)(({ theme }) => ({
-    background: "rgba(255, 255, 255, 0.2)",
-    borderRadius: "16px",
-    boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
-    border: "1px solid rgba(255, 255, 255, 0.3)",
-  }));
+  const { resolvedTheme } = useTheme();
+
   return (
-    <div>
+    <div
+      className={`body  ${
+        resolvedTheme === "dark" ? "dark-theme-body" : "light-theme-body"
+      }`}
+    >
       <Helmet>
         <meta charSet="utf-8" />
         <title>My Portfolio - Sufian Mustafa</title>
@@ -43,16 +43,31 @@ const MyPortfolio = () => {
 
         <Grid item xs={11} style={{ overflow: "hidden", marginTop: "90px" }}>
           <br />
-          <div className="moreproject itemabout item">
+          <div
+            className={`itemabout moreproject  ${
+              resolvedTheme === "dark" ? "dark-theme-item" : "light-theme-item"
+            }`}
+          >
             <br></br>
-            <div className="About3" data-aos="zoom-in">
+            <div
+              className={` About3 ${
+                resolvedTheme === "dark"
+                  ? "dark-theme-textcolor"
+                  : "light-theme-textcolor"
+              }`}
+              data-aos="zoom-in"
+            >
               {" "}
               <h1> About My Portfolio</h1>
             </div>
             <br />
             <Grid item className="flex">
               <div
-                className="itemabout item"
+                className={`itemabout  ${
+                  resolvedTheme === "dark"
+                    ? "dark-theme-item"
+                    : "light-theme-item"
+                }`}
                 style={{ width: "95%", padding: "10px" }}
               >
                 <div style={{ height: "100%" }}>
@@ -79,12 +94,20 @@ const MyPortfolio = () => {
             <br />
             <Grid item className="flex">
               <div
-                className="itemabout item"
+                className={`itemabout  ${
+                  resolvedTheme === "dark"
+                    ? "dark-theme-item"
+                    : "light-theme-item"
+                }`}
                 style={{ width: "95%", padding: "10px" }}
               >
                 <div className="flex">
                   <div
-                    className="About3"
+                    className={` About3 ${
+                      resolvedTheme === "dark"
+                        ? "dark-theme-textcolor"
+                        : "light-theme-textcolor"
+                    }`}
                     style={{
                       fontWeight: "400",
 
@@ -146,10 +169,20 @@ const MyPortfolio = () => {
         <br></br>
 
         <Grid item xs={11} style={{ overflow: "hidden" }}>
-          <div className="moreproject itemabout item">
+          <div
+            className={`itemabout moreproject  ${
+              resolvedTheme === "dark" ? "dark-theme-item" : "light-theme-item"
+            }`}
+          >
             <br></br>
 
-            <div className="About3">
+            <div
+              className={` About3 ${
+                resolvedTheme === "dark"
+                  ? "dark-theme-textcolor"
+                  : "light-theme-textcolor"
+              }`}
+            >
               {" "}
               <h1 data-aos="zoom-in">
                 {" "}
@@ -159,7 +192,11 @@ const MyPortfolio = () => {
             <br />
             <Grid item className="flex">
               <div
-                className="itemabout item"
+                className={`itemabout  ${
+                  resolvedTheme === "dark"
+                    ? "dark-theme-item"
+                    : "light-theme-item"
+                }`}
                 style={{ width: "95%", padding: "10px" }}
               >
                 <div style={{ height: "100%" }}>
@@ -185,12 +222,20 @@ const MyPortfolio = () => {
             </Grid>
             <Grid item className="flex" style={{ padding: "10px" }}>
               <div
-                className="itemabout item"
+                className={`itemabout  ${
+                  resolvedTheme === "dark"
+                    ? "dark-theme-item"
+                    : "light-theme-item"
+                }`}
                 style={{ width: "95%", padding: "10px" }}
               >
                 <div className="flex">
                   <div
-                    className="About3"
+                    className={` About3 ${
+                      resolvedTheme === "dark"
+                        ? "dark-theme-textcolor"
+                        : "light-theme-textcolor"
+                    }`}
                     style={{
                       fontWeight: "400",
 
@@ -260,17 +305,32 @@ const MyPortfolio = () => {
         <br></br>
 
         <Grid item xs={11} style={{ overflow: "hidden" }}>
-          <div className="moreproject itemabout item">
+          <div
+            className={`itemabout moreproject  ${
+              resolvedTheme === "dark" ? "dark-theme-item" : "light-theme-item"
+            }`}
+          >
             <br></br>
 
-            <div className="About3" data-aos="zoom-in">
+            <div
+              className={` About3 ${
+                resolvedTheme === "dark"
+                  ? "dark-theme-textcolor"
+                  : "light-theme-textcolor"
+              }`}
+              data-aos="zoom-in"
+            >
               {" "}
               <h1> The Importance of Responsive Website Design</h1>
             </div>
             <br />
             <Grid item className="flex">
               <div
-                className="itemabout item"
+                className={`itemabout  ${
+                  resolvedTheme === "dark"
+                    ? "dark-theme-item"
+                    : "light-theme-item"
+                }`}
                 style={{ width: "95%", padding: "10px" }}
               >
                 <div style={{ height: "100%" }}>
@@ -296,12 +356,20 @@ const MyPortfolio = () => {
             </Grid>
             <Grid item className="flex" style={{ padding: "10px" }}>
               <div
-                className="itemabout item"
+                className={`itemabout  ${
+                  resolvedTheme === "dark"
+                    ? "dark-theme-item"
+                    : "light-theme-item"
+                }`}
                 style={{ width: "95%", padding: "10px" }}
               >
                 <div className="flex">
                   <div
-                    className="About3"
+                    className={` About3 ${
+                      resolvedTheme === "dark"
+                        ? "dark-theme-textcolor"
+                        : "light-theme-textcolor"
+                    }`}
                     style={{
                       fontWeight: "400",
 
@@ -363,17 +431,32 @@ const MyPortfolio = () => {
         <br></br>
 
         <Grid item xs={11} style={{ overflow: "hidden" }}>
-          <div className="moreproject itemabout item">
+          <div
+            className={`itemabout moreproject  ${
+              resolvedTheme === "dark" ? "dark-theme-item" : "light-theme-item"
+            }`}
+          >
             <br></br>
 
-            <div className="About3" data-aos="zoom-in">
+            <div
+              className={` About3 ${
+                resolvedTheme === "dark"
+                  ? "dark-theme-textcolor"
+                  : "light-theme-textcolor"
+              }`}
+              data-aos="zoom-in"
+            >
               {" "}
               <h1> Backend Part</h1>
             </div>
             <br />
             <Grid item className="flex">
               <div
-                className="itemabout item"
+                className={`itemabout  ${
+                  resolvedTheme === "dark"
+                    ? "dark-theme-item"
+                    : "light-theme-item"
+                }`}
                 style={{ width: "95%", padding: "10px" }}
               >
                 <div style={{ height: "100%" }}>
@@ -399,12 +482,20 @@ const MyPortfolio = () => {
             </Grid>
             <Grid item className="flex" style={{ padding: "10px" }}>
               <div
-                className="itemabout item"
+                className={`itemabout  ${
+                  resolvedTheme === "dark"
+                    ? "dark-theme-item"
+                    : "light-theme-item"
+                }`}
                 style={{ width: "95%", padding: "10px" }}
               >
                 <div className="flex">
                   <div
-                    className="About3"
+                    className={` About3 ${
+                      resolvedTheme === "dark"
+                        ? "dark-theme-textcolor"
+                        : "light-theme-textcolor"
+                    }`}
                     style={{
                       fontWeight: "400",
 
@@ -471,17 +562,32 @@ const MyPortfolio = () => {
         <br></br>
 
         <Grid item xs={11} style={{ overflow: "hidden" }}>
-          <div className="moreproject itemabout item">
+          <div
+            className={`itemabout moreproject  ${
+              resolvedTheme === "dark" ? "dark-theme-item" : "light-theme-item"
+            }`}
+          >
             <br></br>
 
-            <div className="About3" data-aos="zoom-in">
+            <div
+              className={` About3 ${
+                resolvedTheme === "dark"
+                  ? "dark-theme-textcolor"
+                  : "light-theme-textcolor"
+              }`}
+              data-aos="zoom-in"
+            >
               {" "}
               <h1> My Personalised Admin Dashboard</h1>
             </div>
             <br />
             <Grid item className="flex">
               <div
-                className="itemabout item"
+                className={`itemabout  ${
+                  resolvedTheme === "dark"
+                    ? "dark-theme-item"
+                    : "light-theme-item"
+                }`}
                 style={{ width: "95%", padding: "10px" }}
               >
                 <div style={{ height: "100%" }}>
@@ -507,12 +613,20 @@ const MyPortfolio = () => {
             </Grid>
             <Grid item className="flex" style={{ padding: "10px" }}>
               <div
-                className="itemabout item"
+                className={`itemabout  ${
+                  resolvedTheme === "dark"
+                    ? "dark-theme-item"
+                    : "light-theme-item"
+                }`}
                 style={{ width: "95%", padding: "10px" }}
               >
                 <div className="flex">
                   <div
-                    className="About3"
+                    className={` About3 ${
+                      resolvedTheme === "dark"
+                        ? "dark-theme-textcolor"
+                        : "light-theme-textcolor"
+                    }`}
                     style={{
                       fontWeight: "400",
 
@@ -578,17 +692,32 @@ const MyPortfolio = () => {
         <br></br>
 
         <Grid item xs={11} style={{ overflow: "hidden" }}>
-          <div className="moreproject itemabout item">
+          <div
+            className={`itemabout moreproject  ${
+              resolvedTheme === "dark" ? "dark-theme-item" : "light-theme-item"
+            }`}
+          >
             <br></br>
 
-            <div className="About3" data-aos="zoom-in">
+            <div
+              className={` About3 ${
+                resolvedTheme === "dark"
+                  ? "dark-theme-textcolor"
+                  : "light-theme-textcolor"
+              }`}
+              data-aos="zoom-in"
+            >
               {" "}
               <h1> Enhancing Backend Performance</h1>
             </div>
             <br />
             <Grid item className="flex">
               <div
-                className="itemabout item"
+                className={`itemabout  ${
+                  resolvedTheme === "dark"
+                    ? "dark-theme-item"
+                    : "light-theme-item"
+                }`}
                 style={{ width: "95%", padding: "10px" }}
               >
                 <div style={{ height: "100%" }}>
@@ -614,12 +743,20 @@ const MyPortfolio = () => {
             </Grid>
             <Grid item className="flex" style={{ padding: "10px" }}>
               <div
-                className="itemabout item"
+                className={`itemabout  ${
+                  resolvedTheme === "dark"
+                    ? "dark-theme-item"
+                    : "light-theme-item"
+                }`}
                 style={{ width: "95%", padding: "10px" }}
               >
                 <div className="flex">
                   <div
-                    className="About3"
+                    className={` About3 ${
+                      resolvedTheme === "dark"
+                        ? "dark-theme-textcolor"
+                        : "light-theme-textcolor"
+                    }`}
                     style={{
                       fontWeight: "400",
 
@@ -691,10 +828,21 @@ const MyPortfolio = () => {
         <br></br>
 
         <Grid item xs={11} style={{ overflow: "hidden" }}>
-          <div className="moreproject itemabout item">
+          <div
+            className={`itemabout moreproject  ${
+              resolvedTheme === "dark" ? "dark-theme-item" : "light-theme-item"
+            }`}
+          >
             <br></br>
 
-            <div className="About3" data-aos="zoom-in">
+            <div
+              className={` About3 ${
+                resolvedTheme === "dark"
+                  ? "dark-theme-textcolor"
+                  : "light-theme-textcolor"
+              }`}
+              data-aos="zoom-in"
+            >
               {" "}
               <h1> The Pivotal Resources That Helped Me Become a Developer</h1>
             </div>
@@ -702,7 +850,11 @@ const MyPortfolio = () => {
 
             <Grid item className="flex">
               <div
-                className="itemabout item"
+                className={`itemabout  ${
+                  resolvedTheme === "dark"
+                    ? "dark-theme-item"
+                    : "light-theme-item"
+                }`}
                 style={{ width: "95%", padding: "10px" }}
               >
                 <div style={{ height: "100%" }}>
@@ -728,12 +880,20 @@ const MyPortfolio = () => {
             </Grid>
             <Grid item className="flex" style={{ padding: "10px" }}>
               <div
-                className="itemabout item"
+                className={`itemabout  ${
+                  resolvedTheme === "dark"
+                    ? "dark-theme-item"
+                    : "light-theme-item"
+                }`}
                 style={{ width: "95%", padding: "10px" }}
               >
                 <div className="flex">
                   <div
-                    className="About3"
+                    className={` About3 ${
+                      resolvedTheme === "dark"
+                        ? "dark-theme-textcolor"
+                        : "light-theme-textcolor"
+                    }`}
                     style={{
                       fontWeight: "400",
 

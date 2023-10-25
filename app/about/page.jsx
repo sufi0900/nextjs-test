@@ -2,7 +2,7 @@ import Head from "next/head";
 import React from "react";
 import Script from "next/script";
 import { NextSeo } from "next-seo";
-import Aboutcode from "./aboutcode";
+import Aboutcode from "./aboutall0";
 
 export const metadata = {
   title: "About Me - Sufian Mustafa",

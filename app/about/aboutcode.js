@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
 import "animate.css";
-import dynamic from "next/dynamic";
+
 import ListA from "./ListABoutMe";
-import { useMediaQuery, useTheme } from "@mui/material";
+
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -22,15 +22,13 @@ import QuizIcon from "@mui/icons-material/Quiz";
 import Grid from "@mui/material/Grid";
 import ImageGallery from "./ImageGallery";
 import "animate.css";
-
+import { useTheme } from "next-themes";
 import ContactMail from "@mui/icons-material/ContactMail";
 import Link from "next/link";
 import Head from "next/head";
 import Script from "next/script";
 import { NextSeo } from "next-seo";
-import SlideM from "./slideshowmbl";
-const ComponentA = dynamic(() => import("./responsiveshow"));
-const ComponentB = dynamic(() => import("./slideshowlg"));
+
 const About = () => {
   const [showAdvantages, setShowAdvantages] = useState(false);
 
@@ -83,8 +81,7 @@ const About = () => {
   `,
     };
   }
-  const theme = useTheme();
-  const isMatch = useMediaQuery(theme.breakpoints.down("lg"));
+  const { resolvedTheme } = useTheme();
   const button = {
     fontSize: "38px",
     color: "rgba(15, 15, 251, 0.878)",
@@ -110,6 +107,7 @@ const About = () => {
     borderRadius: "40px",
     color: "red",
   };
+
   return (
     <div>
       <Head>
@@ -213,9 +211,22 @@ const About = () => {
         </style>
       </>
 
-      <Grid container spacing={2} padding={2} className="About">
+      <Grid
+        container
+        spacing={2}
+        padding={2}
+        className={` About ${
+          resolvedTheme === "dark"
+            ? "dark-theme-textcolor"
+            : "light-theme-textcolor"
+        }`}
+      >
         <Grid item lg={6} sm={12} className="About3">
-          <div className="item itemabout">
+          <div
+            className={`itemabout  ${
+              resolvedTheme === "dark" ? "dark-theme-item" : "light-theme-item"
+            }`}
+          >
             <div className="AboutLeftDiv para" style={{ overflow: "hidden" }}>
               <h1
                 data-aos="flip-left"
@@ -319,14 +330,20 @@ const About = () => {
               &nbsp;
               <h4>
                 <div
-                  className="AboutH4"
+                  className=" AboutH4 "
                   data-aos="fade-right"
                   data-aos-delay="200"
                   data-aos-duration="700"
                 >
                   Here are few technologies I’ve been recently working with:
                 </div>
-                <div className="AboutLeftDiv_List">
+                <div
+                  className={`AboutLeftDiv_List ${
+                    resolvedTheme === "dark"
+                      ? "dark-theme-textcolor"
+                      : "light-theme-textcolor"
+                  }`}
+                >
                   <ul>
                     <li
                       data-aos="zoom-out-down"
@@ -430,7 +447,11 @@ const About = () => {
                       style={{ width: " 90% " }}
                     >
                       <span
-                        className="progress-label-color"
+                        className={` progress-label-color ${
+                          resolvedTheme === "dark"
+                            ? "dark-theme-progress-label-color"
+                            : "light-theme-progress-label-color"
+                        }`}
                         style={{ fontWeight: "bold" }}
                       >
                         90%
@@ -447,7 +468,11 @@ const About = () => {
                       style={{ width: "50%" }}
                     >
                       <span
-                        className="progress-label-color"
+                        className={` progress-label-color ${
+                          resolvedTheme === "dark"
+                            ? "dark-theme-progress-label-color"
+                            : "light-theme-progress-label-color"
+                        }`}
                         style={{ fontWeight: "bold" }}
                       >
                         50%
@@ -462,7 +487,11 @@ const About = () => {
         </Grid>
 
         <Grid item lg={6} sm={12} padding={1} style={{ overflow: "hidden" }}>
-          <div className="item itemabout">
+          <div
+            className={`itemabout  ${
+              resolvedTheme === "dark" ? "dark-theme-item" : "light-theme-item"
+            }`}
+          >
             <div style={{ padding: "10px" }}>
               <div
                 className="image-area animate__animated animate__backInLeft"
@@ -577,18 +606,6 @@ const About = () => {
           </div>
         </Grid>
       </Grid>
-      <ComponentA />
-      {isMatch ? (
-        <>
-          <SlideM />{" "}
-        </>
-      ) : (
-        <>
-          <ComponentB />
-
-          <br />
-        </>
-      )}
     </div>
   );
 };

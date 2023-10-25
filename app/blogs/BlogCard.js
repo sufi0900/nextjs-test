@@ -1,3 +1,4 @@
+"use client";
 import * as React from "react";
 import CardHeader from "@mui/material/CardHeader";
 import Avatar from "@mui/material/Avatar";
@@ -13,8 +14,9 @@ import Divider from "@mui/material/Divider";
 import Grid from "@mui/material/Grid";
 import Link from "next/link";
 import { Card } from "@mui/material";
-
+import { useTheme } from "next-themes";
 export default function RecipeReviewCard({ postimg, title, slug }) {
+  const { resolvedTheme } = useTheme();
   return (
     <>
       <Grid
@@ -32,7 +34,11 @@ export default function RecipeReviewCard({ postimg, title, slug }) {
           alignItems: "center",
         }}
       >
-        <Card className="BlogCard ProjectCard item">
+        <Card
+          className={`BlogCard ProjectCard item ${
+            resolvedTheme === "dark" ? "dark-theme-item" : "light-theme-item"
+          }`}
+        >
           <CardHeader
             avatar={
               <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -45,7 +51,14 @@ export default function RecipeReviewCard({ postimg, title, slug }) {
               </IconButton>
             }
             title={
-              <div className="blogcardh1" style={{ display: "inline-block" }}>
+              <div
+                className={` blogcardh1 ${
+                  resolvedTheme === "dark"
+                    ? "dark-theme-textcolor"
+                    : "light-theme-textcolor"
+                }`}
+                style={{ display: "inline-block" }}
+              >
                 <h1 style={{ fontSize: "22px", margin: 0 }}>Sufian Mustafa</h1>
               </div>
             }
@@ -70,7 +83,15 @@ export default function RecipeReviewCard({ postimg, title, slug }) {
             href={`/blogs/${slug.current}`}
             className="themecard custom-input-color"
           >
-            <p className=" themecard">Read More..</p>
+            <p
+              className={`themecard About3 ${
+                resolvedTheme === "dark"
+                  ? "dark-theme-textcolor"
+                  : "light-theme-textcolor"
+              }`}
+            >
+              Read More..
+            </p>
           </Link>
 
           <Divider />

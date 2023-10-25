@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import Images from "./Images";
+import { useTheme } from "next-themes";
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import Link from "next/link";
@@ -21,7 +22,7 @@ function CarouselFadeExample() {
     WebkitBackdropFilter: "blur(5px)",
     border: "1px solid rgba(255, 255, 255, 0.3)",
   }));
-
+  const { resolvedTheme } = useTheme();
   const directionButtonse = (direction) => {
     return (
       <div>
@@ -100,7 +101,13 @@ function CarouselFadeExample() {
             padding: "6px",
           }}
         >
-          <div className="About3">
+          <div
+            className={` About3 ${
+              resolvedTheme === "dark"
+                ? "dark-theme-textcolor"
+                : "light-theme-textcolor"
+            }`}
+          >
             {" "}
             <h1>About My Portfolio Website</h1>{" "}
           </div>
@@ -126,7 +133,13 @@ function CarouselFadeExample() {
             >
               <Grid container spacing={2} className="flex">
                 <Grid item lg={12} style={{ height: "auto" }}>
-                  <Item>
+                  <Item
+                    className={`itemabout  ${
+                      resolvedTheme === "dark"
+                        ? "dark-theme-item"
+                        : "light-theme-item"
+                    }`}
+                  >
                     <div style={{ height: "100%" }}>
                       <video
                         src={Images.FrontendVideo.src}
@@ -147,7 +160,13 @@ function CarouselFadeExample() {
                   </Item>
                 </Grid>
                 <Grid item lg={12} className="flex">
-                  <Item>
+                  <Item
+                    className={`itemabout  ${
+                      resolvedTheme === "dark"
+                        ? "dark-theme-item"
+                        : "light-theme-item"
+                    }`}
+                  >
                     <div
                       style={{
                         textAlign: "center",
@@ -157,7 +176,11 @@ function CarouselFadeExample() {
                       }}
                     >
                       <div
-                        className="About3"
+                        className={` About3 ${
+                          resolvedTheme === "dark"
+                            ? "dark-theme-textcolor"
+                            : "light-theme-textcolor"
+                        }`}
                         style={{
                           fontWeight: "400",
                           height: "320px",
@@ -217,7 +240,13 @@ function CarouselFadeExample() {
             >
               <Grid container spacing={2} className="flex">
                 <Grid item lg={12} style={{ height: "auto" }}>
-                  <Item>
+                  <Item
+                    className={`itemabout  ${
+                      resolvedTheme === "dark"
+                        ? "dark-theme-item"
+                        : "light-theme-item"
+                    }`}
+                  >
                     <div style={{ height: "100%" }}>
                       <video
                         src={Images.animation.src}
@@ -238,7 +267,13 @@ function CarouselFadeExample() {
                   </Item>
                 </Grid>
                 <Grid item lg={12} className="flex">
-                  <Item>
+                  <Item
+                    className={`itemabout  ${
+                      resolvedTheme === "dark"
+                        ? "dark-theme-item"
+                        : "light-theme-item"
+                    }`}
+                  >
                     <div
                       style={{
                         textAlign: "center",
@@ -248,7 +283,11 @@ function CarouselFadeExample() {
                       }}
                     >
                       <div
-                        className="About3"
+                        className={` About3 ${
+                          resolvedTheme === "dark"
+                            ? "dark-theme-textcolor"
+                            : "light-theme-textcolor"
+                        }`}
                         style={{
                           fontWeight: "400",
                           height: "320px",
@@ -316,7 +355,13 @@ function CarouselFadeExample() {
             >
               <Grid container spacing={2} className="flex">
                 <Grid item lg={12} style={{ height: "auto" }}>
-                  <Item>
+                  <Item
+                    className={`itemabout  ${
+                      resolvedTheme === "dark"
+                        ? "dark-theme-item"
+                        : "light-theme-item"
+                    }`}
+                  >
                     <div style={{ height: "100%" }}>
                       <video
                         src={Images.responsive.src}
@@ -337,7 +382,13 @@ function CarouselFadeExample() {
                   </Item>
                 </Grid>
                 <Grid item lg={12} className="flex">
-                  <Item>
+                  <Item
+                    className={`itemabout  ${
+                      resolvedTheme === "dark"
+                        ? "dark-theme-item"
+                        : "light-theme-item"
+                    }`}
+                  >
                     <div
                       style={{
                         textAlign: "center",
@@ -347,7 +398,11 @@ function CarouselFadeExample() {
                       }}
                     >
                       <div
-                        className="About3"
+                        className={` About3 ${
+                          resolvedTheme === "dark"
+                            ? "dark-theme-textcolor"
+                            : "light-theme-textcolor"
+                        }`}
                         style={{
                           fontWeight: "400",
                           height: "320px",
@@ -409,7 +464,13 @@ function CarouselFadeExample() {
             >
               <Grid container spacing={2} className="flex">
                 <Grid item lg={12} style={{ height: "auto" }}>
-                  <Item>
+                  <Item
+                    className={`itemabout  ${
+                      resolvedTheme === "dark"
+                        ? "dark-theme-item"
+                        : "light-theme-item"
+                    }`}
+                  >
                     <div style={{ height: "100%" }}>
                       <video
                         src={Images.Backend.src}
@@ -430,7 +491,13 @@ function CarouselFadeExample() {
                   </Item>
                 </Grid>
                 <Grid item lg={12} className="flex">
-                  <Item>
+                  <Item
+                    className={`itemabout  ${
+                      resolvedTheme === "dark"
+                        ? "dark-theme-item"
+                        : "light-theme-item"
+                    }`}
+                  >
                     <div
                       style={{
                         textAlign: "center",
@@ -440,7 +507,11 @@ function CarouselFadeExample() {
                       }}
                     >
                       <div
-                        className="About3"
+                        className={` About3 ${
+                          resolvedTheme === "dark"
+                            ? "dark-theme-textcolor"
+                            : "light-theme-textcolor"
+                        }`}
                         style={{
                           fontWeight: "400",
                           height: "320px",
@@ -501,7 +572,13 @@ function CarouselFadeExample() {
             >
               <Grid container spacing={2} className="flex">
                 <Grid item lg={12} style={{ height: "auto" }}>
-                  <Item>
+                  <Item
+                    className={`itemabout  ${
+                      resolvedTheme === "dark"
+                        ? "dark-theme-item"
+                        : "light-theme-item"
+                    }`}
+                  >
                     <div style={{ height: "100%" }}>
                       <video
                         src={Images.performance.src}
@@ -522,7 +599,13 @@ function CarouselFadeExample() {
                   </Item>
                 </Grid>
                 <Grid item lg={12} className="flex">
-                  <Item>
+                  <Item
+                    className={`itemabout  ${
+                      resolvedTheme === "dark"
+                        ? "dark-theme-item"
+                        : "light-theme-item"
+                    }`}
+                  >
                     <div
                       style={{
                         textAlign: "center",
@@ -532,7 +615,11 @@ function CarouselFadeExample() {
                       }}
                     >
                       <div
-                        className="About3"
+                        className={` About3 ${
+                          resolvedTheme === "dark"
+                            ? "dark-theme-textcolor"
+                            : "light-theme-textcolor"
+                        }`}
                         style={{
                           fontWeight: "400",
                           height: "320px",
@@ -602,7 +689,13 @@ function CarouselFadeExample() {
             >
               <Grid container spacing={2} className="flex">
                 <Grid item lg={12} style={{ height: "auto" }}>
-                  <Item>
+                  <Item
+                    className={`itemabout  ${
+                      resolvedTheme === "dark"
+                        ? "dark-theme-item"
+                        : "light-theme-item"
+                    }`}
+                  >
                     <div style={{ height: "100%" }}>
                       <video
                         src={Images.admin.src}
@@ -623,7 +716,13 @@ function CarouselFadeExample() {
                   </Item>
                 </Grid>
                 <Grid item lg={12} className="flex">
-                  <Item>
+                  <Item
+                    className={`itemabout  ${
+                      resolvedTheme === "dark"
+                        ? "dark-theme-item"
+                        : "light-theme-item"
+                    }`}
+                  >
                     <div
                       style={{
                         textAlign: "center",
@@ -633,7 +732,11 @@ function CarouselFadeExample() {
                       }}
                     >
                       <div
-                        className="About3"
+                        className={` About3 ${
+                          resolvedTheme === "dark"
+                            ? "dark-theme-textcolor"
+                            : "light-theme-textcolor"
+                        }`}
                         style={{
                           fontWeight: "400",
                           height: "320px",
@@ -701,7 +804,13 @@ function CarouselFadeExample() {
             >
               <Grid container spacing={2} className="flex">
                 <Grid item lg={12} style={{ height: "auto" }}>
-                  <Item>
+                  <Item
+                    className={`itemabout  ${
+                      resolvedTheme === "dark"
+                        ? "dark-theme-item"
+                        : "light-theme-item"
+                    }`}
+                  >
                     <div style={{ height: "100%" }}>
                       <video
                         src={Images.resources.src}
@@ -722,7 +831,13 @@ function CarouselFadeExample() {
                   </Item>
                 </Grid>
                 <Grid item lg={12} className="flex">
-                  <Item>
+                  <Item
+                    className={`itemabout  ${
+                      resolvedTheme === "dark"
+                        ? "dark-theme-item"
+                        : "light-theme-item"
+                    }`}
+                  >
                     <div
                       style={{
                         textAlign: "center",
@@ -732,7 +847,11 @@ function CarouselFadeExample() {
                       }}
                     >
                       <div
-                        className="About3"
+                        className={` About3 ${
+                          resolvedTheme === "dark"
+                            ? "dark-theme-textcolor"
+                            : "light-theme-textcolor"
+                        }`}
                         style={{
                           fontWeight: "400",
                           height: "320px",
@@ -795,6 +914,11 @@ function CarouselFadeExample() {
                   style={{ height: "auto", padding: "20px" }}
                 >
                   <Item
+                    className={`itemabout  ${
+                      resolvedTheme === "dark"
+                        ? "dark-theme-item"
+                        : "light-theme-item"
+                    }`}
                     style={{
                       padding: "20px",
                       marginTop: "20px",
@@ -808,7 +932,11 @@ function CarouselFadeExample() {
                       }}
                     >
                       <div
-                        className="About3"
+                        className={` About3 ${
+                          resolvedTheme === "dark"
+                            ? "dark-theme-textcolor"
+                            : "light-theme-textcolor"
+                        }`}
                         style={{
                           fontWeight: "400",
                           height: "320px",

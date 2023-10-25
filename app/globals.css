@@ -199,7 +199,6 @@ body.dark-theme {
 }
 .dark-theme-Home {
   background: #0e2a47;
-
   border: 2px solid rgba(255, 255, 255, 0.807);
   border-radius: 16px;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
@@ -697,7 +696,7 @@ p {
 .AboutLeftDiv p,
 .BlogP p,
 .About3 p {
-  color: white;
+  color: black;
   width: 90%;
   font-family: "Rubik", sans-serif;
   font-size: 20px;
@@ -1784,14 +1783,7 @@ footer {
     auto;
   z-index: 999999;
 }
-.item,
-.itemcontact {
-  background: #0e2a47;
-  border: 2px solid rgba(255, 255, 255, 0.807);
-  border-radius: 16px;
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-    rgba(194, 232, 249, 0.484) 0px 2px 16px 0px;
-}
+
 .carousel-control-prev,
 .carousel-control-next {
   width: 0%;

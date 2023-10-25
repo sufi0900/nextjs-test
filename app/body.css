@@ -1,46 +1,85 @@
-body.dark-mode .About3 p,
-body.dark-mode .footerpara p,
-body.dark-mode .About3 ul li,
-body.dark-mode .About3 ul li a,
-body.dark-mode .ListItemTextSkill,
-body.dark-mode .ListItemText,
-body.dark-mode .projectcardtitle,
-body.dark-mode .ProjectTopTextDiv,
-body.dark-mode .listitemtextadmin,
-body.dark-mode .custom-input-color input,
-body.dark-mode .custom-quill-content .ql-editor,
-body.dark-mode .custom-input-color,
-body.dark-mode .progress-label-color,
-body.dark-mode .blogcardh1,
-body.dark-mode .custom-input-color p {
+.light-theme-About3 p,
+.light-theme-footerpara p,
+.light-theme-About3 ul li,
+.light-theme-About3 ul li a,
+.light-theme-ListItemTextSkill,
+.light-theme-ListItemText,
+.light-theme-projectcardtitle,
+.light-theme-ProjectTopTextDiv,
+.light-theme-listitemtextadmin,
+.light-theme-custom-input-color input,
+.light-theme-custom-quill-content .ql-editor,
+.light-theme-custom-input-color,
+.light-theme-progress-label-color,
+.light-theme-blogcardh1,
+.light-theme-custom-input-color p,
+.light-theme-textcolor p {
   color: black;
 }
-
-body.dark-mode .themecard:hover {
+.dark-theme-About3 p,
+.dark-theme-footerpara p,
+.dark-theme-About3 ul li,
+.dark-theme-About3 ul li a,
+.dark-theme-ListItemTextSkill,
+.dark-theme-ListItemText,
+.dark-theme-projectcardtitle,
+.dark-theme-ProjectTopTextDiv,
+.dark-theme-listitemtextadmin,
+.dark-theme-custom-input-color input,
+.dark-theme-custom-quill-content .ql-editor,
+.dark-theme-custom-input-color,
+.dark-theme-progress-label-color,
+.dark-theme-blogcardh1,
+.dark-theme-custom-input-color p,
+.dark-theme-textcolor p {
+  color: white;
+}
+.light-theme-textcolor {
+  color: black;
+}
+.dark-theme-textcolor {
+  color: white;
+}
+.dark-theme-textcolor p {
+  color: white;
+}
+.light-theme-themecard:hover {
   color: blue;
 }
-body.dark-mode .drawerBackground .MuiDrawer-paper {
+.light-theme-drawerBackground .MuiDrawer-paper {
   background-color: #0e2a47;
   border: 1px solid rgba(255, 255, 255, 0.807);
   border-radius: 16px;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(194, 232, 249, 0.484) 0px 2px 16px 0px;
 }
-body.dark-mode .Home,
-body.dark-mode .item,
-body.dark-mode .itemcontact {
+
+.light-theme-item,
+.light-theme-itemcontact {
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
 }
-body.dark-mode .QuillDescription p {
+.dark-theme-item,
+.dark-theme-itemcontact {
+  background: #0e2a47;
+  border: 2px solid rgba(255, 255, 255, 0.807);
+  border-radius: 16px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(194, 232, 249, 0.484) 0px 2px 16px 0px;
+}
+.light-theme-QuillDescription p {
   color: black;
 }
 
-body.dark-mode footer {
+.light-theme-ooter {
   color: black;
 }
-/* body.dark-mode {
+/* .light-theme-
   background: var(--background-dark);
 } */
 
@@ -52,17 +91,17 @@ body.dark-mode footer {
   border: 2px solid rgba(255, 255, 255, 0.3);
 } */
 
-body.dark-mode .itemcontact,
-body.dark-mode .contactform_container,
-body.dark-mode .new_footer_area {
+.light-theme-itemcontact,
+.light-theme-contactform_container,
+.light-theme-new_footer_area {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   border: 2px solid rgba(255, 255, 255, 0.3);
 }
-body.dark-mode .ProjectCard,
-body.dark-mode .ProjectTopTextDiv {
+.light-theme-ProjectCard,
+.light-theme-ProjectTopTextDiv {
   background: linear-gradient(
     90deg,
     rgba(78, 78, 246, 0.647) 0%,
@@ -73,7 +112,7 @@ body.dark-mode .ProjectTopTextDiv {
     0px 2px 16px 0px rgba(14, 30, 37, 0.32);
   border: 1px solid rgba(254, 56, 214, 0.833);
 }
-body.dark-mode {
+.light-theme {
   background: linear-gradient(
     90deg,
     rgba(78, 78, 246, 0.647) 0%,
