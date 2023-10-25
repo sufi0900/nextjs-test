@@ -9,7 +9,7 @@ import { useTheme } from "next-themes";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 
 // import { motion } from "framer-motion";
-
+import { urlFor } from "../lib/sanityImageUrl";
 import Divider from "@mui/material/Divider";
 import Grid from "@mui/material/Grid";
 import Link from "next/link";
