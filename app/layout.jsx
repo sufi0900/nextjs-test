@@ -5,7 +5,7 @@ import theme from "./theme";
 import "./aos.css";
 import "./font.css";
 import "./body.css";
-import Theme from "./blogs/page1";
+import Theme from "./blogs/nextTheme";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 
@@ -17,8 +17,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
-        <Theme>
+      <Theme>
+        <body>
           <ThemeProvider theme={theme}>
             <CssBaseline />
             <Providers>
@@ -27,8 +27,8 @@ export default function RootLayout({ children }) {
               <main>{children}</main>
             </Providers>
           </ThemeProvider>
-        </Theme>
-      </body>
+        </body>
+      </Theme>
     </html>
   );
 }

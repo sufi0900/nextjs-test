@@ -1,10 +1,12 @@
+/* eslint-disable @next/next/no-img-element */
+"use client";
 import React from "react";
 import { client } from "@/app/lib/sanity";
 import { urlFor } from "@/app/lib/sanityImageUrl";
 
 import Grid from "@mui/material/Grid";
 import { PortableText } from "@portabletext/react";
-
+import { useTheme } from "next-themes";
 import "aos/dist/aos.css";
 
 import "animate.css/animate.min.css";
@@ -29,6 +31,7 @@ export async function generateMetadata({ params }) {
   // Define the metadata object
 }
 export default async function BlogCardDetail({ params }) {
+  const { resolvedTheme } = useTheme();
   const data = await getData(params.slug);
   const PortableTextComponent = {
     types: {
