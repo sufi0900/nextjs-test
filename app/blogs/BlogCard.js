@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import * as React from "react";
 import CardHeader from "@mui/material/CardHeader";
@@ -75,7 +76,7 @@ export default function RecipeReviewCard({ postimg, title, slug }) {
             <h1 style={{ left: "0%", fontSize: "22px" }}> {title} </h1>
           </div>
 
-          {/* <img
+          <img
             src={urlFor(postimg).url()}
             alt="blogImg"
             style={{
@@ -83,11 +84,15 @@ export default function RecipeReviewCard({ postimg, title, slug }) {
               width: "97%",
               borderRadius: "20px",
             }}
-          /> */}
+          />
 
           <Link
             href={`/blogs/${slug.current}`}
-            className="themecard custom-input-color"
+            className={` themecard  ${
+              resolvedTheme === "dark"
+                ? "dark-theme-textcolor"
+                : "light-theme-textcolor"
+            }`}
           >
             <p
               className={` themecard  ${

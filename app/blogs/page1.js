@@ -1,12 +1,19 @@
+"use client";
 import React from "react";
-import Blogs from "./code";
+import { useTheme } from "next-themes";
 
-const page = () => {
+const ThemeHandler = ({ children }) => {
+  const { resolvedTheme } = useTheme();
+
   return (
-    <div>
-      <Blogs />
+    <div
+      className={`body ${
+        resolvedTheme === "dark" ? "dark-theme-body" : "light-theme-body"
+      }`}
+    >
+      {children}
     </div>
   );
 };
 
-export default page;
+export default ThemeHandler;

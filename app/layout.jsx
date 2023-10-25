@@ -5,6 +5,7 @@ import theme from "./theme";
 import "./aos.css";
 import "./font.css";
 import "./body.css";
+import Theme from "./blogs/page1";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 
@@ -17,14 +18,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          <Providers>
-            {/* <Navbar /> */}
-            <MyNav />
-            <main>{children}</main>
-          </Providers>
-        </ThemeProvider>
+        <Theme>
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <Providers>
+              {/* <Navbar /> */}
+              <MyNav />
+              <main>{children}</main>
+            </Providers>
+          </ThemeProvider>
+        </Theme>
       </body>
     </html>
   );
