@@ -221,7 +221,16 @@ const About = () => {
             : "light-theme-textcolor"
         }`}
       >
-        <Grid item lg={6} sm={12} className="About3">
+        <Grid
+          item
+          lg={6}
+          sm={12}
+          className={` About3 ${
+            resolvedTheme === "dark"
+              ? "dark-theme-textcolor"
+              : "light-theme-textcolor"
+          }`}
+        >
           <div
             className={`itemabout  ${
               resolvedTheme === "dark" ? "dark-theme-item" : "light-theme-item"

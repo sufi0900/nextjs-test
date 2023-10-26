@@ -5,6 +5,12 @@ import Grid from "@mui/material/Grid";
 import Head from "next/head";
 import Script from "next/script";
 import { NextSeo } from "next-seo";
+export const metadata = {
+  title: "Blogs - Sufian Mustafa",
+  description:
+    "Explore Sufian Mustafa's portfolio website blogs articles on web development, technology, and more. Stay updated with insightful articles and tutorials on various topics..",
+  author: "Sufian Mustafa",
+};
 async function getData() {
   const query = `*[_type == "post"]`;
   const data = await client.fetch(query);

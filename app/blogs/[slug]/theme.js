@@ -2,7 +2,7 @@
 import React from "react";
 import { useTheme } from "next-themes";
 
-const ThemeHandler = ({ children }) => {
+const ThemeHandler = () => {
   const { resolvedTheme } = useTheme();
 
   return (
@@ -12,9 +12,7 @@ const ThemeHandler = ({ children }) => {
           ? "dark-theme-textcolor"
           : "light-theme-textcolor"
       }`}
-    >
-      {children}
-    </div>
+    ></div>
   );
 };
 

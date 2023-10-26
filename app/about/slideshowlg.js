@@ -12,10 +12,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import Images from "../about/Images";
-import { useTheme } from "next-themes";
+
 import { useState } from "react";
 import Link from "next/link";
-
+import { useTheme } from "next-themes";
 function CarouselFadeExample() {
   const { resolvedTheme } = useTheme();
   const Item = styled(Paper)(({ theme }) => ({
